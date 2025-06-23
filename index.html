@@ -660,29 +660,6 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
         
-        // Form Submission
-        const contactForm = document.getElementById('contactForm');
-        
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const company = document.getElementById('company').value;
-            const message = document.getElementById('message').value;
-            
-            // Here you would typically send the data to a server
-            console.log({ name, email, phone, company, message });
-            
-            // Show success message
-            alert('Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.');
-            
-            // Reset form
-            contactForm.reset();
-        });
-        
         // Mobile Menu Toggle (would need more implementation)
         const mobileMenuButton = document.querySelector('.md\\:hidden');
         mobileMenuButton.addEventListener('click', () => {
