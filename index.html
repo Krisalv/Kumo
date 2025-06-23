@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kumo - Soluciones Cloud en AWS para tu empresa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #000000 0%, #333333 100%);
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.03);
+        }
+        .cloud-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-200 bg-gray-900">
+    <!-- Header/Navbar -->
+    <header class="fixed w-full bg-black shadow-md z-50">
+
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="mr-2">
+                        <img src="kumo-logo.png" alt="Kumo Logo" class="h-14 mr-3">
+                    </div>
+                    <a href="#" class="text-2xl font-bold text-white"></a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="text-gray-300 hover:text-white">Inicio</a>
+                    <a href="#servicios" class="text-gray-300 hover:text-white">Servicios</a>
+                    <!--<a href="#nosotros" class="text-gray-300 hover:text-white">Nosotros</a>
+                    <a href="#clientes" class="text-gray-300 hover:text-white">Clientes</a>-->
+                    <a href="#contacto" class="text-gray-300 hover:text-white">Contacto</a>
+                </div>
+                
+                <button class="md:hidden focus:outline-none">
+                    <i class="fas fa-bars text-gray-600 text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="bg-black pt-32 pb-20 px-6">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Transforma tu negocio con soluciones Cloud en AWS</h1>
+                <p class="text-xl text-blue-100 mb-8">Kumo te ayuda a migrar, optimizar y gestionar tu infraestructura en la nube de Amazon Web Services.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contacto" class="bg-white text-gray-900 hover:bg-gray-200 px-8 py-3 rounded-lg font-semibold text-center transition duration-300">Contáctanos</a>
+                    <a href="#servicios" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold text-center transition duration-300">Nuestros Servicios</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="kumo-nube.png" alt="Cloud Computing" class="w-[480px] h-auto cloud-animation">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+   <!-- <section class="bg-gray-50 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover-scale">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">+500</h3>
+                    <p class="text-gray-600">Servidores migrados a la nube</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg hover-scale">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">+100</h3>
+                    <p class="text-gray-600">Clientes satisfechos</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg hover-scale">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">24/7</h3>
+                    <p class="text-gray-600">Soporte técnico disponible</p>
+                </div>
+            </div>
+        </div>
+    </section>-->
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-20 px-6">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white-800 mb-4">Nuestros Servicios en AWS</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-xl text-white-600 max-w-3xl mx-auto">Ofrecemos soluciones completas para llevar tu negocio a la nube de manera segura y eficiente.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden hover-scale border border-gray-700">
+                    <div class="h-48 bg-gray-700 flex items-center justify-center">
+                        <i class="fas fa-cloud-upload-alt text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Migración a AWS</h3>
+                        <p class="text-white-600 mb-4">Te ayudamos a migrar tus aplicaciones y datos a la nube de AWS de manera segura y sin interrupciones.</p>
+                        <ul class="text-white-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Análisis de compatibilidad</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Planificación estratégica</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Ejecución controlada</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden hover-scale border border-gray-700">
+                    <div class="h-48 bg-gray-700 flex items-center justify-center">
+                        <i class="fas fa-cogs text-white-600 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Optimización Cloud</h3>
+                        <p class="text-white-600 mb-4">Mejoramos el rendimiento y reducimos costos de tu infraestructura existente en AWS.</p>
+                        <ul class="text-white-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Análisis de costos</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Ajuste de recursos</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Automatización</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden hover-scale border border-gray-700">
+                    <div class="h-48 bg-gray-700 flex items-center justify-center">
+                        <i class="fas fa-shield-alt text-white-600 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Seguridad en AWS</h3>
+                        <p class="text-white-600 mb-4">Protegemos tus datos y aplicaciones con las mejores prácticas de seguridad en la nube.</p>
+                        <ul class="text-white-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Configuración de IAM</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Protección de datos</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Monitoreo continuo</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden hover-scale border border-gray-700">
+                    <div class="h-48 bg-gray-700 flex items-center justify-center">
+                        <i class="fas fa-database text-white-600 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Gestión de Bases de Datos</h3>
+                        <p class="text-white-600 mb-4">Administración profesional de tus bases de datos en AWS (RDS, DynamoDB, Aurora).</p>
+                        <ul class="text-white-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Configuración inicial</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Respaldo y recuperación</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Escalado automático</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden hover-scale border border-gray-700">
+                    <div class="h-48 bg-gray-700 flex items-center justify-center">
+                        <i class="fas fa-network-wired text-white-600 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Arquitectura Cloud</h3>
+                        <p class="text-white-600 mb-4">Diseñamos arquitecturas escalables, resilientes y de alto rendimiento en AWS.</p>
+                        <ul class="text-white-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Diseño personalizado</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Implementación de mejores prácticas</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Documentación completa</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden hover-scale border border-gray-700">
+                    <div class="h-48 bg-gray-700 flex items-center justify-center">
+                        <i class="fas fa-headset text-white-600 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Soporte y Monitoreo</h3>
+                        <p class="text-white-600 mb-4">Ofrecemos soporte técnico especializado y monitoreo continuo de tu infraestructura.</p>
+                        <ul class="text-white-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Respuesta 24/7</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Alertas proactivas</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Reportes mensuales</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <!--<section id="nosotros" class="py-20 px-6 bg-gray-50">
+        <div class="container mx-auto">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">¿Por qué elegir Kumo?</h2>
+                    <div class="w-20 h-1 bg-blue-600 mb-6"></div>
+                    <p class="text-gray-600 mb-6 text-lg">Kumo nació con la visión de simplificar la adopción de la nube para empresas de todos los tamaños. Nuestro equipo de expertos certificados en AWS combina conocimiento técnico con un enfoque empresarial.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-certificate text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-black mb-1">Certificaciones AWS</h4>
+                                <p class="text-black">Todos nuestros ingenieros están certificados por Amazon Web Services.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-hand-holding-usd text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-black mb-1">Ahorro Garantizado</h4>
+                                <p class="text-black">Optimizamos tu infraestructura para reducir costos sin sacrificar rendimiento.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-lock text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-black mb-1">Seguridad Primero</h4>
+                                <p class="text-black">Implementamos las mejores prácticas de seguridad desde el primer día.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold mb-6 text-center">Nuestro Proceso</h3>
+                        
+                        <div class="space-y-8">
+                            <div class="flex items-start">
+                                <div class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4 mt-1 flex-shrink-0">1</div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1">Evaluación Inicial</h4>
+                                    <p class="text-gray-600">Analizamos tu infraestructura actual y necesidades para crear un plan personalizado.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4 mt-1 flex-shrink-0">2</div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1">Propuesta Técnica</h4>
+                                    <p class="text-gray-600">Presentamos una solución detallada con arquitectura, costos y cronograma.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4 mt-1 flex-shrink-0">3</div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1">Implementación</h4>
+                                    <p class="text-gray-600">Nuestro equipo ejecuta la migración o implementación con mínima interrupción.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4 mt-1 flex-shrink-0">4</div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1">Soporte Continuo</h4>
+                                    <p class="text-gray-600">Ofrecemos monitoreo, optimización y soporte técnico post-implementación.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     Clients Section -->
+   <!-- <section id="clientes" class="py-20 px-6">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nuestros Clientes</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Empresas que han confiado en nuestras soluciones cloud</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+                <div class="bg-white p-6 rounded-lg shadow-md flex justify-center hover-scale">
+                    <img src="https://via.placeholder.com/150x60?text=Empresa+1" alt="Cliente 1" class="h-12 object-contain">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex justify-center hover-scale">
+                    <img src="https://via.placeholder.com/150x60?text=Empresa+2" alt="Cliente 2" class="h-12 object-contain">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex justify-center hover-scale">
+                    <img src="https://via.placeholder.com/150x60?text=Empresa+3" alt="Cliente 3" class="h-12 object-contain">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex justify-center hover-scale">
+                    <img src="https://via.placeholder.com/150x60?text=Empresa+4" alt="Cliente 4" class="h-12 object-contain">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex justify-center hover-scale">
+                    <img src="https://via.placeholder.com/150x60?text=Empresa+5" alt="Cliente 5" class="h-12 object-contain">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex justify-center hover-scale">
+                    <img src="https://via.placeholder.com/150x60?text=Empresa+6" alt="Cliente 6" class="h-12 object-contain">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex justify-center hover-scale">
+                    <img src="https://via.placeholder.com/150x60?text=Empresa+7" alt="Cliente 7" class="h-12 object-contain">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex justify-center hover-scale">
+                    <img src="https://via.placeholder.com/150x60?text=Empresa+8" alt="Cliente 8" class="h-12 object-contain">
+                </div>
+            </div>
+            -->
+      <!--      <div class="mt-16 bg-blue-50 rounded-xl p-8">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h3 class="text-2xl text-black font-bold mb-4">¿Listo para llevar tu negocio a la nube?</h3>
+                    <p class="text-black mb-6">Agenda una consulta gratuita con uno de nuestros expertos en AWS.</p>
+                    <a href="#contacto" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold inline-block transition duration-300">Agendar Consulta</a>
+                </div>
+            </div>
+        </div>
+    </section>
+-->
+    <!-- Testimonials Section -->
+<!--    <section class="py-20 px-6 bg-gray-50">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Testimonios</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Lo que nuestros clientes dicen sobre nuestros servicios</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover-scale">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Kumo migró nuestro ERP completo a AWS sin ningún problema. El equipo fue profesional y el resultado superó nuestras expectativas."</p>
+                    <div class="flex items-center">
+                        <div class="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Carlos Méndez</h4>
+                            <p class="text-gray-500 text-sm">Director TI, RetailCorp</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg hover-scale">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Gracias a la optimización que hizo Kumo, redujimos nuestros costos en AWS en un 40% manteniendo el mismo nivel de rendimiento."</p>
+                    <div class="flex items-center">
+                        <div class="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Ana Rodríguez</h4>
+                            <p class="text-gray-500 text-sm">CTO, FinTech Solutions</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg hover-scale">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"El soporte 24/7 de Kumo nos da la tranquilidad de que nuestra infraestructura está siempre monitoreada y protegida."</p>
+                    <div class="flex items-center">
+                        <div class="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Luis González</h4>
+                            <p class="text-gray-500 text-sm">Gerente de Sistemas, LogiTrans</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+-->
+    <!-- Contact Section -->
+    <section id="contacto" class="py-20 px-6 gradient-bg">
+        <div class="container mx-auto">
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12 text-white">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Contáctanos</h2>
+                    <div class="w-20 h-1 bg-white mb-6"></div>
+                    <p class="text-blue-100 mb-8 text-lg">Estamos listos para ayudarte a llevar tu negocio a la nube. Completa el formulario y nos pondremos en contacto </p>
+                    
+                    <div class="space-y-6">
+                        <!--<div class="flex items-start">
+                            <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Oficina Principal</h4>
+                                <p class="text-blue-100">Av. Cloud Computing 1234, Piso 15<br>Ciudad Tecnológica</p>
+                            </div> 
+                        </div>-->
+                        
+                        <div class="flex items-start">
+                            <!--<div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Teléfono</h4>
+                                <p class="text-blue-100">+1 (234) 567-8900</p>
+                            </div>-->
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Email</h4>
+                                <p class="text-blue-100">contacto@kumoarg.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!--<div class="mt-8">
+                        <h4 class="font-bold text-lg mb-4">Síguenos</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-white bg-opacity-20 hover:bg-opacity-30 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-white bg-opacity-20 hover:bg-opacity-30 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="bg-white bg-opacity-20 hover:bg-opacity-30 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="bg-white bg-opacity-20 hover:bg-opacity-30 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>-->
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <h3 class="text-2xl font-bold mb-6 text-gray-800">Envíanos un mensaje</h3>
+                        <form id="contactForm">
+                            <div class="mb-6">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Nombre Completo</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Correo Electrónico</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Teléfono</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="company" class="block text-gray-700 font-medium mb-2">Empresa</label>
+                                <input type="text" id="company" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Mensaje</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition duration-300">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12 px-6">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="mr-2">
+                            <img src="kumo-logo.png" alt="Kumo Logo" class="h-14 mr-6">
+                        </div>
+                        <a href="#" class="text-2xl font-bold"></a>
+                    </div>
+                    <p class="text-gray-400 mb-4">Soluciones cloud en AWS para impulsar tu negocio.</p>
+                    <div class="flex space-x-4">
+                        <!-- <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a> 
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>-->
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!--<div>
+                    <h4 class="text-lg font-bold mb-4">Servicios</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Migración a AWS</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Optimización Cloud</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Seguridad en AWS</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Gestión de Bases de Datos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Soporte y Monitoreo</a></li>
+                    </ul>
+                </div> -->
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-gray-400 hover:text-white transition duration-300">Inicio</a></li>
+                        <li><a href="#servicios" class="text-gray-400 hover:text-white transition duration-300">Servicios</a></li>
+                       <!-- <li><a href="#nosotros" class="text-gray-400 hover:text-white transition duration-300">Nosotros</a></li> -->
+                       <!-- <li><a href="#clientes" class="text-gray-400 hover:text-white transition duration-300">Clientes</a></li>-->
+                        <li><a href="#contacto" class="text-gray-400 hover:text-white transition duration-300">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Suscríbete</h4>
+                    <p class="text-gray-400 mb-4">Recibe las últimas noticias y ofertas de Kumo.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Tu correo" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-800 w-full">
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-lg transition duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 Kumo Cloud Argentina. Todos los derechos reservados.</p>
+                <!--<div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Política de Privacidad</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Términos de Servicio</a>
+                </div>-->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-gray-700 text-white w-12 h-12 rounded-full shadow-lg hidden border border-gray-600">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Form Submission
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const company = document.getElementById('company').value;
+            const message = document.getElementById('message').value;
+            
+            // Here you would typically send the data to a server
+            console.log({ name, email, phone, company, message });
+            
+            // Show success message
+            alert('Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.');
+            
+            // Reset form
+            contactForm.reset();
+        });
+        
+        // Mobile Menu Toggle (would need more implementation)
+        const mobileMenuButton = document.querySelector('.md\\:hidden');
+        mobileMenuButton.addEventListener('click', () => {
+            // Implement mobile menu toggle functionality
+            console.log('Mobile menu clicked');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
